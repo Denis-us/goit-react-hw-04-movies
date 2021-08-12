@@ -4,9 +4,9 @@ import AppBar from "./components/AppBar/AppBar";
 
 import HomePage from "./views/HomePage";
 import MoviesPage from "./views/MoviesPage";
-import MovieDetailsPage from "./views/MovieDetailsPage";
 import Cast from "./views/Cast";
 import Reviews from "./views/Reviews";
+import MovieDetailsPage from "./views/MovieDetailsPage";
 import NotFoundView from "./views/NotFoundView";
 
 export default function App() {
