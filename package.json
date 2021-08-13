@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://Denis-us.github.io/goit-react-hw-04-movies",
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",

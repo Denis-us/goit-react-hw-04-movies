@@ -1,5 +1,10 @@
-// import styles from "./Container.module.css";
+import PropTypes from "prop-types";
+import s from "../Container/Container.module.css";
 
 export default function Container({ children }) {
-  return <div>{children}</div>;
+  return <div className={s.container}>{children}</div>;
 }
+
+Container.propTypes = {
+  children: PropTypes.node.isRequired,
+};
