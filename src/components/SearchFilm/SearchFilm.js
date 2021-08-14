@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import PropTypes from "prop-types";
+import styles from "./SearchFilm.module.css";
 
 export default function SearchFilm({ onSubmit }) {
   const [value, setValue] = useState("");
@@ -25,20 +27,20 @@ export default function SearchFilm({ onSubmit }) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="SearchForm">
+      <form onSubmit={handleSubmit} className={styles.form}>
         <input
-          className="SearchForm-input"
+          className={styles.input}
           type="text"
           autoComplete="off"
           value={value}
-          autoFocus
           placeholder="Search movie"
           onChange={handleSearchFilm}
         />
-        <button type="submit" className="SearchForm-button">
-          <span className="SearchForm-button-label">Search</span>
+        <button type="submit" className={styles.btnForm}>
+          <span className={styles.textBtn}>Search</span>
         </button>
       </form>
+      <ToastContainer autoClose={3000} />
     </div>
   );
 }

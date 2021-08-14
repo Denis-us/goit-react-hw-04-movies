@@ -1,0 +1,15 @@
+.list {
+  list-style-type: none;
+}
+
+.listEl {
+  margin: 10px 0px 10px 0px;
+}
+
+.author {
+  font-size: large;
+}
+
+.reviewNone {
+  margin: 10px 0px 10px 20px;
+}

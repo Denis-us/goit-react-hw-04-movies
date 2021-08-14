@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import * as moviesAPI from "../../services/movieApi";
 import { useParams } from "react-router-dom";
-import defaultImg from "../../static/default.jpg";
-import s from "../CastPage/CastPage.module.css";
+import defaultImg from "../../static/no_poster.jpg";
+import styles from "../CastPage/CastPage.module.css";
 
 export default function CastPage() {
   const { movieId } = useParams();
@@ -22,10 +22,11 @@ export default function CastPage() {
   console.log(cast);
 
   return (
-    <ul className={s.castList}>
+    <ul className={styles.list}>
       {cast.map(({ id, profile_path, name, character }) => (
-        <li key={id}>
+        <li key={id} className={styles.listEl}>
           <img
+            className={styles.image}
             alt={id}
             src={
               profile_path
@@ -33,8 +34,10 @@ export default function CastPage() {
                 : defaultImg
             }
           />
-          <p>{name}</p>
-          <p>{character}</p>
+          <div className={styles.actorCharacter}>
+            <p className={styles.name}>{name}</p>
+            <p className={styles.name}>{character}</p>
+          </div>
         </li>
       ))}
     </ul>

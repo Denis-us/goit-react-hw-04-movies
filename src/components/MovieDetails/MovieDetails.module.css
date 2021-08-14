@@ -1,0 +1,39 @@
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.listGenres {
+  list-style-type: none;
+  display: flex;
+  padding: 0px;
+}
+
+.listEl {
+  margin: 0px 10px 0px 10px;
+}
+
+.details {
+  display: flex;
+  margin: 20px 50px 20px 50px;
+}
+
+.descriptionBlock {
+  margin-left: 20px;
+}
+
+.generalTitle {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.title {
+  font-size: x-large;
+  margin: 0px 0px 15px 30px;
+}
+
+.descriptionPart {
+  margin: 0px 0px 30px 20px;
+}

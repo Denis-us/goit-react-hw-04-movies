@@ -1,0 +1,16 @@
+.addInfo {
+  text-align: center;
+}
+
+.list {
+  display: flex;
+}
+
+.listEl {
+  list-style-type: none;
+  margin: 15px;
+}
+
+.name {
+  font-size: large;
+}

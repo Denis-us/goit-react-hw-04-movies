@@ -1,16 +1,13 @@
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import styles from "./MoviesList.module.css";
 
 function MoviesList({ movies }) {
-  const { url } = useRouteMatch();
-  console.log(url);
-
   return (
     <div>
-      <ul>
+      <ul className={styles.list}>
         {movies.map(({ id, original_title }) => (
           <li key={id}>
-            {/* <Link to={`${url}/${id}`}>{original_title}</Link> */}
             <Link to={`/movies/${id}`}>{original_title}</Link>
           </li>
         ))}

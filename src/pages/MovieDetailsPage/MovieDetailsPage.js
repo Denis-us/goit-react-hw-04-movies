@@ -1,19 +1,19 @@
-import { useParams } from "react-router-dom";
 import { useState, useEffect, lazy, Suspense } from "react";
 import {
+  useParams,
+  NavLink,
   Route,
   useRouteMatch,
-  // useLocation,
   useHistory,
 } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 import { Button } from "@material-ui/core";
+import PropTypes from "prop-types";
+
 import * as moviesAPI from "../../services/movieApi";
-import MovieDatails from "../../components/MovieDetails/MovieDetails";
-// import routes from "../../routes";
-// import PropTypes from "prop-types";
-// import CastPage from "../CastPage/CastPage";
-// import ReviewsPage from "../ReviewsPage/ReviewsPage";
+import MovieDetails from "../../components/MovieDetails/MovieDetails";
+import CustomLoader from "../../components/Loader/Loader";
+import style from "./MovieDetailsPage.module.css";
+
 const CastPage = lazy(() =>
   import("../CastPage/CastPage.js" /* webpackChunkName: "CastPage" */)
 );
@@ -21,12 +21,11 @@ const ReviewsPage = lazy(() =>
   import("../ReviewsPage/ReviewsPage" /* webpackChunkName: "ReviewsPage" */)
 );
 
-export default function MovieDatailsPage() {
+export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const match = useRouteMatch();
-  // const location = useLocation();
   const history = useHistory();
-  console.log(history);
+
   const [movie, setMovie] = useState({
     poster_path: null,
     title: null,
@@ -68,7 +67,7 @@ export default function MovieDatailsPage() {
       </Button>
 
       {movie && (
-        <MovieDatails
+        <MovieDetails
           poster_path={movie.poster_path}
           title={movie.title}
           overview={movie.overview}
@@ -79,23 +78,25 @@ export default function MovieDatailsPage() {
       )}
 
       <div>
-        <h3>Additional information</h3>
+        <h3 className={style.addInfo}>Additional information</h3>
         <hr />
-        <ul>
-          <li>
+        <ul className={style.list}>
+          <li className={style.listEl}>
             <NavLink
               to={{
                 pathname: `${match.url}/cast`,
               }}
+              className={style.name}
             >
               Cast
             </NavLink>
           </li>
-          <li>
+          <li className={style.listEl}>
             <NavLink
               to={{
                 pathname: `${match.url}/reviews`,
               }}
+              className={style.name}
             >
               Reviews
             </NavLink>
@@ -104,7 +105,7 @@ export default function MovieDatailsPage() {
       </div>
       <hr />
 
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<CustomLoader />}>
         <Route path={`${match.path}/cast`}>
           <CastPage />
         </Route>
@@ -117,11 +118,11 @@ export default function MovieDatailsPage() {
   );
 }
 
-// MovieDatailsPage.propTypes = {
-//   poster_path: PropTypes.string,
-//   title: PropTypes.string,
-//   overview: PropTypes.string.isRequired,
-//   genres: PropTypes.array.isRequired,
-//   vote_average: PropTypes.number.isRequired,
-//   id: PropTypes.number.isRequired,
-// }
+MovieDetailsPage.propTypes = {
+  poster_path: PropTypes.string,
+  title: PropTypes.string,
+  overview: PropTypes.string.isRequired,
+  genres: PropTypes.array.isRequired,
+  vote_average: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
+};
