@@ -20,12 +20,6 @@ const MovieDetailsPage = lazy(() =>
   )
 );
 
-const NotFoundPage = lazy(() =>
-  import(
-    "./pages/NotFoundPage/NotFoundPage.js" /* webpackChunkName: "NotFound-page" */
-  )
-);
-
 export default function App() {
   return (
     <Container>
@@ -42,10 +36,6 @@ export default function App() {
 
           <Route path="/movies/:movieId">
             <MovieDetailsPage />
-          </Route>
-
-          <Route>
-            <NotFoundPage />
           </Route>
 
           <Route render={() => <Redirect to={{ pathname: "/" }} />} />
