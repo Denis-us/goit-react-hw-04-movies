@@ -5,6 +5,7 @@ import {
   Route,
   useRouteMatch,
   useHistory,
+  useLocation,
 } from "react-router-dom";
 import { Button } from "@material-ui/core";
 import PropTypes from "prop-types";
@@ -25,6 +26,7 @@ export default function MovieDetailsPage() {
   const { movieId } = useParams();
   const match = useRouteMatch();
   const history = useHistory();
+  const location = useLocation();
 
   const [movie, setMovie] = useState({
     poster_path: null,
@@ -52,7 +54,10 @@ export default function MovieDetailsPage() {
   }, [movieId]);
 
   const buttonGoBack = () => {
-    history.goBack();
+    if (location?.state?.search) {
+      return history.push(`?query=${location?.state?.search}`);
+    }
+    history.push(location?.state?.from ?? "/");
   };
 
   return (
@@ -85,8 +90,11 @@ export default function MovieDetailsPage() {
             <NavLink
               to={{
                 pathname: `${match.url}/cast`,
+                state: {
+                  from: location?.state?.from ?? "/",
+                  search: location?.state?.search,
+                },
               }}
-              className={style.name}
             >
               Cast
             </NavLink>
@@ -95,8 +103,11 @@ export default function MovieDetailsPage() {
             <NavLink
               to={{
                 pathname: `${match.url}/reviews`,
+                state: {
+                  from: location?.state?.from ?? "/",
+                  search: location?.state?.search,
+                },
               }}
-              className={style.name}
             >
               Reviews
             </NavLink>
