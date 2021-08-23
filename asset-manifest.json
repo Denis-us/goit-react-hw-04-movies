@@ -9,8 +9,8 @@
     "ReviewsPage.js": "/goit-react-hw-04-movies/static/js/ReviewsPage.23ba4a6a.chunk.js",
     "ReviewsPage.js.map": "/goit-react-hw-04-movies/static/js/ReviewsPage.23ba4a6a.chunk.js.map",
     "home-page.css": "/goit-react-hw-04-movies/static/css/home-page.3ed3e036.chunk.css",
-    "home-page.js": "/goit-react-hw-04-movies/static/js/home-page.843e59a3.chunk.js",
-    "home-page.js.map": "/goit-react-hw-04-movies/static/js/home-page.843e59a3.chunk.js.map",
+    "home-page.js": "/goit-react-hw-04-movies/static/js/home-page.d4c60908.chunk.js",
+    "home-page.js.map": "/goit-react-hw-04-movies/static/js/home-page.d4c60908.chunk.js.map",
     "main.css": "/goit-react-hw-04-movies/static/css/main.1c7d8fae.chunk.css",
     "main.js": "/goit-react-hw-04-movies/static/js/main.aecb3c94.chunk.js",
     "main.js.map": "/goit-react-hw-04-movies/static/js/main.aecb3c94.chunk.js.map",
@@ -20,8 +20,8 @@
     "movies-page.css": "/goit-react-hw-04-movies/static/css/movies-page.2c2813aa.chunk.css",
     "movies-page.js": "/goit-react-hw-04-movies/static/js/movies-page.4cdcfcc0.chunk.js",
     "movies-page.js.map": "/goit-react-hw-04-movies/static/js/movies-page.4cdcfcc0.chunk.js.map",
-    "runtime-main.js": "/goit-react-hw-04-movies/static/js/runtime-main.1f43a4f5.js",
-    "runtime-main.js.map": "/goit-react-hw-04-movies/static/js/runtime-main.1f43a4f5.js.map",
+    "runtime-main.js": "/goit-react-hw-04-movies/static/js/runtime-main.b765dbd1.js",
+    "runtime-main.js.map": "/goit-react-hw-04-movies/static/js/runtime-main.b765dbd1.js.map",
     "static/js/8.2f0d9f75.chunk.js": "/goit-react-hw-04-movies/static/js/8.2f0d9f75.chunk.js",
     "static/js/8.2f0d9f75.chunk.js.map": "/goit-react-hw-04-movies/static/js/8.2f0d9f75.chunk.js.map",
     "static/js/9.bad93b66.chunk.js": "/goit-react-hw-04-movies/static/js/9.bad93b66.chunk.js",
@@ -42,7 +42,7 @@
     "static/media/no_poster.7e905efb.jpg": "/goit-react-hw-04-movies/static/media/no_poster.7e905efb.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1f43a4f5.js",
+    "static/js/runtime-main.b765dbd1.js",
     "static/js/8.2f0d9f75.chunk.js",
     "static/css/main.1c7d8fae.chunk.css",
     "static/js/main.aecb3c94.chunk.js"
