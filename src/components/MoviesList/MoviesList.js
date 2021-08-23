@@ -1,9 +1,8 @@
-import { Link, useRouteMatch, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import styles from "./MoviesList.module.css";
 
 function MoviesList({ movies }) {
-  const { url } = useRouteMatch();
   const location = useLocation();
 
   return (
