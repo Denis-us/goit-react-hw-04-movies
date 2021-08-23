@@ -34,6 +34,14 @@ export default function MoviesPage() {
     }
   }, [search]);
 
+  useEffect(() => {
+    if (location.search === "") {
+      return;
+    }
+    const param = new URLSearchParams(location.search).get("query");
+    setSearch(param);
+  }, [location.search]);
+
   return (
     <div>
       <Container>

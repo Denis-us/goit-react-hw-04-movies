@@ -1,4 +1,3 @@
-// import React, { Component } from 'react';
 import { useState, useEffect } from "react";
 import { useRouteMatch } from "react-router-dom";
 import * as moviesAPI from "../../services/movieApi";
